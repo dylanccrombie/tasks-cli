@@ -61,6 +61,7 @@ match args[1]:
             for idx,t in enumerate(tasks):
                 if t["id"] == to_delete:
                     del tasks[idx]
+                    print(f"{t["description"]} removed successfully!")
                     break
             else:
                 raise ValueError()
@@ -72,4 +73,29 @@ match args[1]:
             if t["id"] > to_delete:
                 t["id"] -= 1
         update_file()
-        print(f"Task {to_delete} removed successfully!")
+    case "mark-in-progress" | "mark-done" | "mark-todo":
+        if len(args) != 3:
+            print("Please enter the ID of the task you would like to mark")
+            print("e.g. python task-cli.py mark-in-progress 1")
+            quit(1)
+        try:
+            to_modify = int(args[2])
+            for t in tasks:
+                if t["id"] == to_modify:
+                    t["updatedAt"] = datetime.datetime.now().strftime("%c")
+                    match args[1]:
+                        case "mark-in-progress":
+                            t["status"] = "in-progress"
+                        case "mark-done":
+                            t["status"] = "done"
+                        case "mark-todo":
+                            t["status"] = "todo"
+                    update_file()
+                    print(f"{t["description"]} successfully marked as {t["status"]}!")
+                    break
+            else:
+                raise ValueError()
+        except ValueError:
+            print("Task not found. Make sure you input a valid ID. ")
+            print("e.g. python task-cli.py mark-in-progress 1")
+            quit(1)
