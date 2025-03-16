@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d8d78f-0f07-4a3d-ac26-a7674e49a7dc" name="Changes" comment="User may now delete tasks.">
+    <list default="true" id="98d8d78f-0f07-4a3d-ac26-a7674e49a7dc" name="Changes" comment="User may now mark tasks as done, in-progress, or todo.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/task-cli.py" afterDir="false" />
     </list>
@@ -74,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742100063205</updated>
-      <workItem from="1742100064221" duration="4743000" />
+      <workItem from="1742100064221" duration="5178000" />
     </task>
     <task id="LOCAL-00001" summary="Added starting code.">
       <option name="closed" value="true" />
@@ -119,9 +119,10 @@
     <MESSAGE value="User may now add tasks." />
     <MESSAGE value="User may now update task names." />
     <MESSAGE value="User may now delete tasks." />
-    <option name="LAST_COMMIT_MESSAGE" value="User may now delete tasks." />
+    <MESSAGE value="User may now mark tasks as done, in-progress, or todo." />
+    <option name="LAST_COMMIT_MESSAGE" value="User may now mark tasks as done, in-progress, or todo." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Task_Tracker_CLI$task_cli.coverage" NAME="task-cli Coverage Results" MODIFIED="1742103856801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Task_Tracker_CLI$task_cli.coverage" NAME="task-cli Coverage Results" MODIFIED="1742105759812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

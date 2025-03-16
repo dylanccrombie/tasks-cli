@@ -45,6 +45,7 @@ match args[1]:
         for t in tasks:
             if str(t["id"]) == args[2]:
                 t["description"] = args[3]
+                t["updatedAt"] = datetime.datetime.now().strftime("%c")
                 update_file()
                 print(f"Task {t["id"]} updated successfully!")
                 quit(0)
