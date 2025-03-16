@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98d8d78f-0f07-4a3d-ac26-a7674e49a7dc" name="Changes" comment="Added starting code.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="98d8d78f-0f07-4a3d-ac26-a7674e49a7dc" name="Changes" comment="User may now update task names.">
       <change beforePath="$PROJECT_DIR$/task-cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/task-cli.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742100063205</updated>
-      <workItem from="1742100064221" duration="2264000" />
+      <workItem from="1742100064221" duration="3519000" />
     </task>
     <task id="LOCAL-00001" summary="Added starting code.">
       <option name="closed" value="true" />
@@ -84,7 +83,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742101467704</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="User may now add tasks.">
+      <option name="closed" value="true" />
+      <created>1742102586460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742102586460</updated>
+    </task>
+    <task id="LOCAL-00003" summary="User may now update task names.">
+      <option name="closed" value="true" />
+      <created>1742103201653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742103201653</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,9 +107,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added starting code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added starting code." />
+    <MESSAGE value="User may now add tasks." />
+    <MESSAGE value="User may now update task names." />
+    <option name="LAST_COMMIT_MESSAGE" value="User may now update task names." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Task_Tracker_CLI$task_cli.coverage" NAME="task-cli Coverage Results" MODIFIED="1742100878594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Task_Tracker_CLI$task_cli.coverage" NAME="task-cli Coverage Results" MODIFIED="1742103424897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
