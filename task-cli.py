@@ -1,9 +1,9 @@
-import sys
-import os
-import json
 import datetime
-args = sys.argv
+import json
+import os
+import sys
 
+args = sys.argv
 
 if len(args) == 1:
     print("Please enter some arguments. e.g. python task-cli.py add \"Buy groceries\"")
@@ -18,9 +18,19 @@ with open("tasks.json") as file:
     except json.decoder.JSONDecodeError:
         tasks = []
 
+
 def update_file():
     with open("tasks.json", 'w') as f:
         f.write(json.dumps(tasks))
+
+
+def print_task(task):
+    print(f"{task["description"]}:")
+    print(f"\tTask ID: {task["id"]}")
+    print(f"\tStatus: {task["status"]}")
+    print(f"\tTime created at: {task["createdAt"]}")
+    print(f"\tTime last modified at: {task["updatedAt"]}")
+
 
 match args[1]:
     case "add":
@@ -28,11 +38,11 @@ match args[1]:
             print("Please enter which task you would like to add.")
             quit(1)
         curr = {
-                "id": len(tasks) + 1,
-                "description": args[2],
-                "status": "todo",
-                "createdAt": datetime.datetime.now().strftime("%c"),
-                "updatedAt": datetime.datetime.now().strftime("%c")
+            "id": len(tasks) + 1,
+            "description": args[2],
+            "status": "todo",
+            "createdAt": datetime.datetime.now().strftime("%c"),
+            "updatedAt": datetime.datetime.now().strftime("%c")
         }
         tasks.append(curr)
         update_file()
@@ -59,7 +69,7 @@ match args[1]:
             quit(1)
         try:
             to_delete = int(args[2])
-            for idx,t in enumerate(tasks):
+            for idx, t in enumerate(tasks):
                 if t["id"] == to_delete:
                     del tasks[idx]
                     print(f"{t["description"]} removed successfully!")
@@ -100,3 +110,23 @@ match args[1]:
             print("Task not found. Make sure you input a valid ID. ")
             print("e.g. python task-cli.py mark-in-progress 1")
             quit(1)
+    case "list":
+        match len(args):
+            case 2:
+                if len(tasks) == 0:
+                    print("You have no tasks! Enjoy your peace of mind!")
+                for t in tasks:
+                    print_task(t)
+            case 3:
+                shown_with_status = False
+                for t in tasks:
+                    if t["status"] == args[2]:
+                        print_task(t)
+                        shown_with_status = True
+                if not shown_with_status:
+                    print("No tasks with that status. Valid statuses are:")
+                    print("todo, in-progress, done")
+            case _:
+                print("Please check that you either use list, or list by status.")
+                print("e.g. python task-cli.py list")
+                print("e.g. python task-cli.py list todo")
