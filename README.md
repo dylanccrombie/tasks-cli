@@ -1,5 +1,6 @@
 # What is this?
 This is a CLI task manager program that you can run in Python!
+
 Project idea from: https://roadmap.sh/projects/task-tracker
 # Quick start
 Clone the repository, and run the task-cli.py file.
